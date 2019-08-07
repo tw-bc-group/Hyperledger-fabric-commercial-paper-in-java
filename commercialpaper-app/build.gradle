@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+    id 'maven'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'org.ecsoya.fabric'
+version = '0.0.1-SNAPSHOT'
+
+description = """CommercialPaper Demo by Using Java SDK"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+dependencies {
+    compile group: 'org.hyperledger.fabric-sdk-java', name: 'fabric-sdk-java', version: '1.4.4'
+    compile 'org.json:json:20180813'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
